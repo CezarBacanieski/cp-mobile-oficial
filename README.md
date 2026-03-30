@@ -20,10 +20,10 @@ Esse fluxo foi escolhido porque acontece com frequencia no dia a dia da faculdad
 
 ## Integrantes do Grupo
 
-- Preencher com o nome completo do integrante 1
-- Preencher com o nome completo do integrante 2
-- Preencher com o nome completo do integrante 3
-- Preencher com o nome completo do integrante 4
+- NOME: Lorenzo Hayashi Mangini | RM: 554901
+- NOME: Milton Cezar Bacanieski | RM: 555206
+- NOME: Vitor Bebiano Mulford | RM: 555026
+- NOME: Victório Maia Bastelli | RM: 554723
 
 ## Como Rodar o Projeto
 
