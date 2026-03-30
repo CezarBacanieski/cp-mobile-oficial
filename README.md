@@ -47,12 +47,10 @@ Depois disso:
 ## Demonstracao
 
 ### Prints obrigatorios
-
-- Adicionar print da tela `Inicio`
-- Adicionar print da tela `Salas`
-- Adicionar print da tela `Blocos`
-- Adicionar print da tela `Detalhe da Sala`
-
+![alt text](image-1.png)
+![alt text](image-4.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 ### Video ou GIF
 
 - Inserir o link da demonstracao aqui: `COLE_O_LINK_AQUI`
