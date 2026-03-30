@@ -51,7 +51,8 @@ Depois disso:
 ![alt text](image-4.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
-### Video ou GIF
+
+### Video demonstração
 
 https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive_link
 
