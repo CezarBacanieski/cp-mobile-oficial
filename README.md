@@ -53,8 +53,7 @@ Depois disso:
 ![alt text](image-3.png)
 ### Video ou GIF
 
-[Link vídeo demonstração: `https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive_link`
-]
+https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive_link
 
 ## Decisoes Tecnicas
 
