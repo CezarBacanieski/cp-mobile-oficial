@@ -89,6 +89,3 @@ https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive
 - [x] StyleSheet
 - [x] Feedback visual e estado vazio
 - [x] Tema visual coerente com FIAP
-- [ ] Completar nomes dos integrantes
-- [ ] Adicionar prints
-- [ ] Adicionar link do video ou GIF
