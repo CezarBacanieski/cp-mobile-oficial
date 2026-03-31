@@ -51,7 +51,7 @@ Depois disso:
 ![alt text](image-4.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
-<img width="336" height="715" alt="image" src="https://github.com/user-attachments/assets/f36e0313-c42b-4688-9160-9e02bcbd0639" />
+<img width="334" height="716" alt="image" src="https://github.com/user-attachments/assets/633b6815-316e-43bc-8ef6-e3ada6a9576c" />
 
 ### Video demonstração
 
