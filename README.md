@@ -51,9 +51,11 @@ Depois disso:
 ![alt text](image-4.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
-### Video ou GIF
+<img width="334" height="716" alt="image" src="https://github.com/user-attachments/assets/633b6815-316e-43bc-8ef6-e3ada6a9576c" />
 
-- Inserir o link da demonstracao aqui: `COLE_O_LINK_AQUI`
+### Video demonstração
+
+https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive_link
 
 ## Decisoes Tecnicas
 
@@ -88,6 +90,3 @@ Depois disso:
 - [x] StyleSheet
 - [x] Feedback visual e estado vazio
 - [x] Tema visual coerente com FIAP
-- [ ] Completar nomes dos integrantes
-- [ ] Adicionar prints
-- [ ] Adicionar link do video ou GIF
