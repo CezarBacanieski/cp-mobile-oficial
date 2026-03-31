@@ -1,5 +1,5 @@
 import { router } from 'expo-router';
-import { Image, StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native';
 
 import { ActionButton } from '@/components/action-button';
 import { RoomCard } from '@/components/room-card';
@@ -35,7 +35,7 @@ export default function HomeScreen() {
           Um app para descobrir salas vagas em poucos toques e reduzir a perda de tempo entre aulas.
         </Text>
 
-        <Image source={require('@/assets/images/icon.png')} style={styles.heroImage} />
+        {/* <Image source={require('@/assets/images/icon.png')} style={styles.heroImage} /> */}
 
         <View style={styles.heroActions}>
           <ActionButton label="Consultar agora" onPress={() => router.push('/salas')} />
