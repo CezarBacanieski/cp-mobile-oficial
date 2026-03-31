@@ -69,7 +69,7 @@ export default function RoomDetailsScreen() {
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.sectionTitle}>Faixas livres</Text>
+        <Text style={styles.sectionTitle}>Faixas livres</Text>,
         {room.todaySlots.map((slot) => (
           <Text key={slot} style={styles.slotText}>
             {slot}
@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     borderRadius: 22,
     borderWidth: 1,
     marginBottom: 14,
+    marginTop: 14,
     padding: 18,
   },
   eyebrow: {
