@@ -1,10 +1,18 @@
-import { Tabs } from 'expo-router';
+import { Redirect, Tabs, router } from 'expo-router';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import { Text, TouchableOpacity } from 'react-native';
 
 import { palette } from '@/constants/palette';
+import { useAuth } from '@/contexts/auth-context';
 
 export default function TabLayout() {
+  const { isAuthenticated, logout } = useAuth();
+
+  if (!isAuthenticated) {
+    return <Redirect href="/login" />;
+  }
+
   return (
     <Tabs
       screenOptions={{
@@ -19,6 +27,16 @@ export default function TabLayout() {
           backgroundColor: palette.surface,
           borderTopColor: palette.border,
         },
+        headerRight: () => (
+          <TouchableOpacity
+            onPress={async () => {
+              await logout();
+              router.replace('/login');
+            }}
+            style={{ marginRight: 14 }}>
+            <Text style={{ color: palette.accent, fontSize: 13, fontWeight: '800' }}>Sair</Text>
+          </TouchableOpacity>
+        ),
       }}>
       <Tabs.Screen
         name="index"

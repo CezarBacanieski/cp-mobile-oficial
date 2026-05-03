@@ -7,6 +7,7 @@ type ActionButtonProps = {
   onPress: () => void;
   variant?: 'primary' | 'secondary';
   style?: ViewStyle;
+  disabled?: boolean;
 };
 
 export function ActionButton({
@@ -14,12 +15,19 @@ export function ActionButton({
   onPress,
   variant = 'primary',
   style,
+  disabled = false,
 }: ActionButtonProps) {
   return (
     <TouchableOpacity
       activeOpacity={0.85}
       onPress={onPress}
-      style={[styles.button, variant === 'secondary' && styles.buttonSecondary, style]}>
+      disabled={disabled}
+      style={[
+        styles.button,
+        variant === 'secondary' && styles.buttonSecondary,
+        disabled && styles.buttonDisabled,
+        style,
+      ]}>
       <Text style={[styles.label, variant === 'secondary' && styles.labelSecondary]}>{label}</Text>
     </TouchableOpacity>
   );
@@ -36,6 +44,9 @@ const styles = StyleSheet.create({
     backgroundColor: palette.surface,
     borderWidth: 1,
     borderColor: palette.border,
+  },
+  buttonDisabled: {
+    opacity: 0.55,
   },
   label: {
     color: palette.white,

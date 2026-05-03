@@ -1,14 +1,22 @@
-import { router, useLocalSearchParams } from 'expo-router';
+import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { ActionButton } from '@/components/action-button';
 import { ScreenShell } from '@/components/screen-shell';
 import { palette } from '@/constants/palette';
 import { findRoomById, periodOptions } from '@/constants/rooms';
+import { useAppData } from '@/contexts/app-data-context';
+import { useAuth } from '@/contexts/auth-context';
 
 export default function RoomDetailsScreen() {
+  const { isAuthenticated } = useAuth();
   const params = useLocalSearchParams<{ id?: string }>();
   const room = params.id ? findRoomById(params.id) : undefined;
+  const { hasReservation, toggleReservation } = useAppData();
+
+  if (!isAuthenticated) {
+    return <Redirect href="/login" />;
+  }
 
   if (!room) {
     return (
@@ -69,7 +77,7 @@ export default function RoomDetailsScreen() {
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.sectionTitle}>Faixas livres</Text>,
+        <Text style={styles.sectionTitle}>Faixas livres</Text>
         {room.todaySlots.map((slot) => (
           <Text key={slot} style={styles.slotText}>
             {slot}
@@ -78,14 +86,21 @@ export default function RoomDetailsScreen() {
       </View>
 
       <ActionButton
+        label={hasReservation(room.id) ? 'Cancelar reserva' : 'Salvar reserva'}
+        onPress={() => void toggleReservation(room.id)}
+      />
+
+      <ActionButton
         label={`Ver mais salas em ${room.campus}`}
         onPress={() => router.push({ pathname: '/salas', params: { campus: room.campus } })}
+        style={{ marginTop: 10 }}
+        variant="secondary"
       />
       <ActionButton
         label={`Filtrar bloco ${room.block}`}
         onPress={() => router.push({ pathname: '/salas', params: { campus: room.campus, bloco: room.block } })}
-        variant="secondary"
         style={{ marginTop: 10 }}
+        variant="secondary"
       />
     </ScreenShell>
   );

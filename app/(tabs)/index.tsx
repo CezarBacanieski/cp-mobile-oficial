@@ -6,8 +6,12 @@ import { RoomCard } from '@/components/room-card';
 import { ScreenShell } from '@/components/screen-shell';
 import { palette } from '@/constants/palette';
 import { getFreeRoomsCount, getTopCampus, rooms } from '@/constants/rooms';
+import { useAppData } from '@/contexts/app-data-context';
+import { useAuth } from '@/contexts/auth-context';
 
 export default function HomeScreen() {
+  const { user } = useAuth();
+  const { reservations } = useAppData();
   const { width } = useWindowDimensions();
   const wide = width > 420;
   const previewRooms = rooms.filter((room) => room.availability.agora).slice(0, 3);
@@ -16,6 +20,7 @@ export default function HomeScreen() {
   const metrics = [
     { label: 'Salas livres agora', value: String(getFreeRoomsCount('agora')) },
     { label: 'Campus com mais vagas', value: bestCampus.campus },
+    { label: 'Reservas salvas', value: String(reservations.length) },
     {
       label: 'Salas com projetor',
       value: String(
@@ -31,6 +36,7 @@ export default function HomeScreen() {
           <Text style={styles.heroBadgeText}>Checkpoint 1 - MVP</Text>
         </View>
         <Text style={styles.heroTitle}>Sala Livre FIAP</Text>
+        <Text style={styles.welcomeText}>Bem-vindo, {user?.fullName ?? 'aluno'}.</Text>
         <Text style={styles.heroText}>
           Um app para descobrir salas vagas em poucos toques e reduzir a perda de tempo entre aulas.
         </Text>
@@ -105,6 +111,12 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginTop: 10,
     maxWidth: 290,
+  },
+  welcomeText: {
+    color: palette.accent,
+    fontSize: 14,
+    fontWeight: '700',
+    marginTop: 8,
   },
   heroImage: {
     height: 110,
