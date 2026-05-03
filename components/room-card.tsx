@@ -15,7 +15,7 @@ export function RoomCard({ room, period, onPress }: RoomCardProps) {
   return (
     <TouchableOpacity activeOpacity={0.9} onPress={onPress} style={styles.card}>
       <View style={styles.header}>
-        <View>
+        <View style={styles.headerMain}>
           <Text style={styles.title}>{room.name}</Text>
           <Text style={styles.subtitle}>
             {room.campus} - Bloco {room.block} - {room.floor}o andar
@@ -62,18 +62,25 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 12,
   },
+  headerMain: {
+    flex: 1,
+  },
   title: {
     color: palette.text,
     fontSize: 18,
     fontWeight: '800',
+    flexShrink: 1,
   },
   subtitle: {
     color: palette.textMuted,
     fontSize: 12,
     marginTop: 4,
+    flexShrink: 1,
   },
   badge: {
     borderRadius: 999,
+    flexShrink: 1,
+    maxWidth: '48%',
     paddingHorizontal: 12,
     paddingVertical: 8,
   },
