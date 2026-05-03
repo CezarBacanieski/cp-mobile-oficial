@@ -10,6 +10,7 @@ type FilterChipProps = {
 
 export function FilterChip({ label, selected, onPress }: FilterChipProps) {
   return (
+
     <TouchableOpacity
       activeOpacity={0.85}
       onPress={onPress}
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
+
   chipSelected: {
     backgroundColor: palette.accentSoft,
     borderColor: palette.accent,
@@ -39,5 +41,7 @@ const styles = StyleSheet.create({
   },
   labelSelected: {
     color: palette.text,
+
+
   },
 });
