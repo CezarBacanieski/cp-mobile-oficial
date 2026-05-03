@@ -134,9 +134,15 @@ Depois disso:
 <img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/bfc9e01b-c148-403a-aab7-909f63f739ec" />
 
 
-### Video demonstracao
+### Video demonstracao CP1
 
 https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive_link
+
+
+### Video demonstracao CP2
+
+https://drive.google.com/file/d/1e01KDEZLQQwjI-wwwc9XRiINGMHqdCVw/view?usp=drivesdk
+
 
 ## Decisoes Tecnicas
 
