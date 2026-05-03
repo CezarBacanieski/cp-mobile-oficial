@@ -126,7 +126,10 @@ Depois disso:
 ![alt text](image-3.png)
 <img width="334" height="716" alt="image" src="https://github.com/user-attachments/assets/633b6815-316e-43bc-8ef6-e3ada6a9576c" />
 
+
 ### Prints obrigatorios CP2
+
+
 <img width="739" height="1600" alt="app" src="https://github.com/user-attachments/assets/349ec418-dd9c-48fe-8010-2de9c91897ad" />
 <img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/bfc9e01b-c148-403a-aab7-909f63f739ec" />
 
