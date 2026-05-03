@@ -17,6 +17,11 @@ Esse fluxo foi escolhido porque acontece com frequencia no dia a dia da faculdad
 - Tela de detalhe da sala com recursos, disponibilidade e horarios livres
 - Loading visual ao atualizar filtros
 - Estado vazio quando nenhuma sala atende aos filtros
+- Autenticação via AsyncStorage
+- Persistencia dos dados
+- Tela de cadastro
+- Tela de login
+- Animação no erro de login com shake do animated API
 
 ## Integrantes do Grupo
 
@@ -80,13 +85,7 @@ https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive
 - `components/`: botoes, chips, cards e layout base
 - `constants/rooms.ts`: base mockada e regras de filtro
 
-## Proximos Passos
-
-- Integrar com dados reais de ocupacao por campus
-- Permitir favoritos e historico de salas usadas
-- Adicionar busca por capacidade e recursos extras
-
-## Checklist de Entrega
+## Checklist de Entrega cp1
 
 - [x] Projeto com Expo
 - [x] Navegacao com Expo Router
@@ -96,3 +95,11 @@ https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive
 - [x] StyleSheet
 - [x] Feedback visual e estado vazio
 - [x] Tema visual coerente com FIAP
+
+
+## Checklist de Entrega cp2
+- [x] Autenticaççao com AsyncStorage
+- [x] Persistência de Dados com AsyncStorage
+- [x] Gerenciamento de Estado Global com Context API
+- [x] Formulários com Validação
+- [x] Diferencial no projeto (feedback de efeito visual de shake no erro de login)
