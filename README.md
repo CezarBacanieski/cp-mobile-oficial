@@ -35,6 +35,8 @@ Esse fluxo foi escolhido porque acontece com frequencia no dia a dia da faculdad
 ### Passo a passo
 
 ```bash
+git clone https://github.com/CezarBacanieski/cp-mobile-oficial.git
+cd cp-mobile-oficial
 npm install
 npx expo start
 ```
@@ -64,6 +66,10 @@ https://drive.google.com/file/d/1O99ZvGE06YYFabAW29VARlZF7GHcoCZ6/view?usp=drive
 - Foi usado `useState` para controlar filtros e `useEffect` para aplicar atualizacao com loading simulado
 - A interface usa `StyleSheet`, `View`, `Text`, `Image` e `TouchableOpacity`
 - A tela de salas centraliza a regra principal do MVP: localizar rapidamente uma sala livre
+
+## Diferencial Implementado CP2
+
+- **Animações com Animated API:** foi adicionado efeito de `shake` no card de login quando ha erro de validacao ou credenciais invalidas. Escolhemos esse diferencial porque melhora o feedback visual instantaneo para o usuario, deixando o fluxo de autenticacao mais claro e responsivo.
 
 ## Estrutura Resumida
 

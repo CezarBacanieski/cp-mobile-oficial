@@ -1,6 +1,6 @@
 import { Redirect, router } from 'expo-router';
-import { useMemo, useState } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { useMemo, useRef, useState } from 'react';
+import { Animated, StyleSheet, Text, TextInput } from 'react-native';
 
 import { ActionButton } from '@/components/action-button';
 import { ScreenShell } from '@/components/screen-shell';
@@ -15,6 +15,7 @@ export default function LoginScreen() {
   const [password, setPassword] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [invalidCredentials, setInvalidCredentials] = useState(false);
+  const shake = useRef(new Animated.Value(0)).current;
 
   const errors = useMemo(() => {
     return {
@@ -33,21 +34,35 @@ export default function LoginScreen() {
     return <Redirect href="/(tabs)" />;
   }
 
+  const runShake = () => {
+    Animated.sequence([
+      Animated.timing(shake, { toValue: 10, duration: 45, useNativeDriver: true }),
+      Animated.timing(shake, { toValue: -10, duration: 45, useNativeDriver: true }),
+      Animated.timing(shake, { toValue: 6, duration: 40, useNativeDriver: true }),
+      Animated.timing(shake, { toValue: -6, duration: 40, useNativeDriver: true }),
+      Animated.timing(shake, { toValue: 0, duration: 35, useNativeDriver: true }),
+    ]).start();
+  };
+
   const handleLogin = async () => {
     setSubmitted(true);
     setInvalidCredentials(false);
 
-    if (hasErrors) return;
+    if (hasErrors) {
+      runShake();
+      return;
+    }
 
     const ok = await login(email, password);
     if (!ok) {
       setInvalidCredentials(true);
+      runShake();
     }
   };
 
   return (
     <ScreenShell contentStyle={styles.content}>
-      <View style={styles.card}>
+      <Animated.View style={[styles.card, { transform: [{ translateX: shake }] }]}>
         <Text style={styles.title}>Entrar no app</Text>
         <Text style={styles.subtitle}>Use seu e-mail e senha cadastrados para acessar as salas.</Text>
 
@@ -82,7 +97,7 @@ export default function LoginScreen() {
           variant="secondary"
           style={styles.button}
         />
-      </View>
+      </Animated.View>
     </ScreenShell>
   );
 }

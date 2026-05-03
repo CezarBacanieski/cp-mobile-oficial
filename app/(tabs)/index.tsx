@@ -33,7 +33,7 @@ export default function HomeScreen() {
     <ScreenShell>
       <View style={styles.hero}>
         <View style={styles.heroBadge}>
-          <Text style={styles.heroBadgeText}>Checkpoint 1 - MVP</Text>
+          <Text style={styles.heroBadgeText}>Checkpoint 2 - MVP</Text>
         </View>
         <Text style={styles.heroTitle}>Sala Livre FIAP</Text>
         <Text style={styles.welcomeText}>Bem-vindo, {user?.fullName ?? 'aluno'}.</Text>
